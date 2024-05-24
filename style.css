@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url("/images/food-recipe.jpg");
+  /* Make sure to set your image size using image resizer before putting it here so as not to have blurry picture and always let the size to be around 368kb - 390kb*/
+  background-repeat: no-repeat;
+  /* The background repeat is to make sure that the images do not repeat itself on the screen*/
+  background-size: 100vw 100vh;
+  /* The background-size should be set to 100vw 100vh so that it can cover the whole screen for all kind of device size*/
+}
+
+.topnav {
+  display: flex;
+  /* This is used to ensure that all the div inside the html are set to row alignment*/
+  background-color: #666361;
+  justify-content: space-between;
+  /* This is ensure that in the 2 div, the first div is shifted to the right end while the second div is shifted to the left end */
+  border: 1px solid #666361;
+}
+
+ul {
+  display: flex;
+   /* This is used to ensure that all the links inside the ul are set to row alignment*/
+  text-decoration: none;
+  list-style-type: none;
+  /* This is to ensure that the bullet points are removed */
+  gap: 16px;
+  padding-top: 6px;
+}
+
+a {
+  color: #fff;
+}
+
+/*The LVHA rule is followed here since we are using pseudo class for the "a" element
+L stands for Link and it should be used first, followed by 
+V stands for visited and it is followed by
+H stands for hover and it is followed by 
+A stands for active and this is the order in which it should be followed
+*/
+
+a:link {
+  /*This is the style for what happens before you click on the link*/
+  color: #fff;
+  text-decoration: none;
+}
+
+a:visited {
+  /*This is the style for what happens when you have visited the link*/
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: palevioletred;
+  text-decoration: underline;
+}
+
+a:active {
+  /*This is the style for what happens when you long press the link*/
+  color: blue;
+  text-decoration: underline;
+}
+
+input[type="search"] {
+  border: 1px solid #d9d9d9;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  background-color: #d9d9d9;
+  height: 20px;
+  width: 150px;
+  font-size: 10px;
+}
