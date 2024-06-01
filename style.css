@@ -4,30 +4,36 @@
 
 body {
   background-image: url("/images/food-recipe.jpg");
-  /* Make sure to set your image size using image resizer before putting it here so as not to have blurry picture and always let the size to be around 368kb - 390kb*/
+  /* Make sure to set your image size using image resizer before putting it here so as not to have blurry picture and always let the size to be 368kb*/
   background-repeat: no-repeat;
   /* The background repeat is to make sure that the images do not repeat itself on the screen*/
   background-size: 100vw 100vh;
   /* The background-size should be set to 100vw 100vh so that it can cover the whole screen for all kind of device size*/
+  backdrop-filter: blur(2px);
+  /*This is to make the background image blurry*/
 }
 
 .topnav {
   display: flex;
   /* This is used to ensure that all the div inside the html are set to row alignment*/
-  background-color: #666361;
+  /** flex: 1 1 300px;**/
+  background-color: #333232;
   justify-content: space-between;
   /* This is ensure that in the 2 div, the first div is shifted to the right end while the second div is shifted to the left end */
   border: 1px solid #666361;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 40px;
 }
 
 ul {
   display: flex;
-   /* This is used to ensure that all the links inside the ul are set to row alignment*/
+  /* This is used to ensure that all the links inside the ul are set to row alignment*/
   text-decoration: none;
   list-style-type: none;
   /* This is to ensure that the bullet points are removed */
   gap: 16px;
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 a {
@@ -64,9 +70,40 @@ a:active {
   text-decoration: underline;
 }
 
+.searchbar {
+  display: inline-flex;
+  overflow: hidden;
+  row-gap: 1px;
+  height: 30px;
+  font-size: 10px;
+}
+
+button {
+  padding: 0.3rem;
+  margin-right: 20px;
+  margin-top: 7px;
+  border: 1px solid #d9d9d9;
+  background: #666361;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+input[type="search"] {
+  height: 30px;
+  width: 150px;
+  margin-top: 6px;
+  margin-right: 0px;
+  margin-left: 10px;
+  font-size: 10px;
+  padding: 0.3rem;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/**
 input[type="search"] {
   border: 1px solid #d9d9d9;
-  padding: 4px 8px;
+  padding: 0.3rem;
   border-radius: 8px;
   margin-top: 6px;
   margin-bottom: 8px;
@@ -75,4 +112,36 @@ input[type="search"] {
   height: 20px;
   width: 150px;
   font-size: 10px;
+}
+**/
+
+.box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  margin: auto;
+}
+
+.text {
+  color: #fff;
+  padding-left: 25%;
+  padding-right: 15%;
+  padding-top: 12%;
+  font-size: 4em;
+  font-weight: 400;
+}
+
+.button {
+  margin-left: 40%;
+}
+
+input[type="submit"] {
+  background-color: rgb(11, 7, 11);
+  color: #fff;
+  border: solid #333232;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  width: 200px;
 }
